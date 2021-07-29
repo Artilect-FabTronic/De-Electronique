@@ -376,7 +376,7 @@
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "",
+      "netlist": "./",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
@@ -427,6 +427,10 @@
     [
       "51a34073-deca-4c01-85e6-29b843f6c20a",
       ""
+    ],
+    [
+      "c75d577d-1368-4ac4-92ba-6ea9da14150f",
+      "De electronique"
     ]
   ],
   "text_variables": {}
