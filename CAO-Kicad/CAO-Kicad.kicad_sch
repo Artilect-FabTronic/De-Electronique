@@ -14,14 +14,14 @@
   )
 
 
-  (sheet (at 138.43 27.94) (size 49.53 35.56) (fields_autoplaced)
+  (sheet (at 21.59 24.13) (size 49.53 35.56) (fields_autoplaced)
     (stroke (width 0.0006) (type solid) (color 0 0 0 0))
     (fill (color 0 0 0 0.0000))
     (uuid c75d577d-1368-4ac4-92ba-6ea9da14150f)
-    (property "Nom feuille" "De electronique" (id 0) (at 138.43 27.3043 0)
+    (property "Nom feuille" "De electronique" (id 0) (at 21.59 23.4943 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Fichier de feuille" "de_elec.kicad_sch" (id 1) (at 138.43 64.0087 0)
+    (property "Fichier de feuille" "de_elec.kicad_sch" (id 1) (at 21.59 60.1987 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
   )
@@ -32,26 +32,74 @@
   )
 
   (symbol_instances
-    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/3f12aa33-9c08-4a66-904f-7ff507ac6010"
-      (reference "D?") (unit 1) (value "LED") (footprint "LED_THT:LED_D5.0mm")
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/c856c994-3b28-46d2-b6c4-cfd4a09bdf0c"
+      (reference "#PWR01") (unit 1) (value "VCC") (footprint "")
     )
-    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/44f833d5-7c87-4378-a885-fbac1347757e"
-      (reference "D?") (unit 1) (value "LED") (footprint "LED_THT:LED_D5.0mm")
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/1998137d-0916-4d35-b6a8-e92d9d88d9dc"
+      (reference "#PWR02") (unit 1) (value "GND") (footprint "")
     )
-    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/4f063d99-02c1-4629-8d36-12c6ac14329c"
-      (reference "D?") (unit 1) (value "LED") (footprint "LED_THT:LED_D5.0mm")
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/52cf1731-350f-4222-bdcf-436321ebfe1f"
+      (reference "#PWR03") (unit 1) (value "GND") (footprint "")
     )
-    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/4266caad-59c2-4e8d-9eec-bfc208f99b2e"
-      (reference "J?") (unit 1) (value "Conn_01x02") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/df5405e6-7309-4ce9-9d02-d2d52ba65d7a"
+      (reference "#PWR04") (unit 1) (value "GND") (footprint "")
     )
-    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/32a5e041-8201-47e0-ada2-733638341093"
-      (reference "R?") (unit 1) (value "R") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal")
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/920ad638-99a8-4d76-835e-97f6426f6f3f"
+      (reference "#PWR05") (unit 1) (value "VCC") (footprint "")
     )
-    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/9f2305e5-4fff-4a3e-8010-f82c5e257aa7"
-      (reference "R?") (unit 1) (value "R") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal")
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/688d37b9-5a58-45b4-8009-efbd093e7f76"
+      (reference "#PWR06") (unit 1) (value "GND") (footprint "")
     )
-    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/fa47fbcc-6406-45c3-a820-b36f7819cbc6"
-      (reference "R?") (unit 1) (value "R") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal")
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/72356204-2236-4316-9251-37eeb9ae35a9"
+      (reference "C1") (unit 1) (value "C") (footprint "")
+    )
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/2c513e4b-3ebb-4785-9087-8281c413a06a"
+      (reference "C2") (unit 1) (value "C_Polarized") (footprint "")
+    )
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/bb6949a4-bc90-4481-a7dc-0ea01082aa6f"
+      (reference "D1") (unit 1) (value "LED") (footprint "LEDs:LED_D5.0mm")
+    )
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/fe946614-6461-492a-a691-f496e1f6fd7a"
+      (reference "D2") (unit 1) (value "LED") (footprint "LEDs:LED_D5.0mm")
+    )
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/7a824bb0-27de-44cc-9aef-e67f76c0731f"
+      (reference "D3") (unit 1) (value "LED") (footprint "LEDs:LED_D5.0mm")
+    )
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/d8b5cf32-7977-462a-bd9e-42c5f4188d00"
+      (reference "D4") (unit 1) (value "LED") (footprint "LEDs:LED_D5.0mm")
+    )
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/fc573955-b38f-4418-a1a4-a0648d45394b"
+      (reference "D5") (unit 1) (value "LED") (footprint "LEDs:LED_D5.0mm")
+    )
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/3527e604-fe69-4b72-98b7-22c7a91f656c"
+      (reference "D6") (unit 1) (value "LED") (footprint "LEDs:LED_D5.0mm")
+    )
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/15355201-f677-4b9e-809e-c66c0865243d"
+      (reference "D7") (unit 1) (value "LED") (footprint "LEDs:LED_D5.0mm")
+    )
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/86ee8edf-b2e8-48a8-8002-16f4ddfd214a"
+      (reference "J1") (unit 1) (value "ICSP") (footprint "")
+    )
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/d1e8852a-36a2-4017-bd90-ce0b4a9fd52d"
+      (reference "JP1") (unit 1) (value "Jumper_2_Open") (footprint "")
+    )
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/f1f8c76a-4611-4569-9196-e9181ae3985a"
+      (reference "R1") (unit 1) (value "1k") (footprint "Resistors_SMD:R_0805_HandSoldering")
+    )
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/668a947c-dd02-4a5f-8d8e-c0723fae0c49"
+      (reference "R2") (unit 1) (value "560") (footprint "Resistors_SMD:R_0805_HandSoldering")
+    )
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/aad576ff-1a2a-4904-9f6a-e7de31a63638"
+      (reference "R3") (unit 1) (value "560") (footprint "Resistors_SMD:R_0805_HandSoldering")
+    )
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/8c03dd69-34d3-4aa4-afcd-a6b9bd57fd13"
+      (reference "R4") (unit 1) (value "560") (footprint "Resistors_SMD:R_0805_HandSoldering")
+    )
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/9efa6f65-5d79-4e30-896b-d1238995c3ba"
+      (reference "SW1") (unit 1) (value "COMMUTATEUR VIBRATION") (footprint "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm")
+    )
+    (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/c456604f-e26f-4f54-816c-9e3874bc3628"
+      (reference "U1") (unit 1) (value "puce de microcontrôleur IC ATTINY85 MCU 8BIT ATTINY 20MHZ, 8 broches DIP-8") (footprint "Housings_DIP:DIP-8_W7.62mm")
     )
   )
 )

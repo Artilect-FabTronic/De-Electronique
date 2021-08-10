@@ -1,2 +1,5 @@
 # Ignorer le répertoire suivant
-CAO-Kicad/CAO-Kicad-backups
+*CAO-Kicad/CAO-Kicad-backups/
+
+# Ignorer les fichiers suivants
+_autosave*

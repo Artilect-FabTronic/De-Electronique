@@ -758,6 +758,12 @@
     (uuid bffc3486-ce66-4b17-952d-b666adee7735)
   )
 
+  (text "Mettre les LED sous la forme du Dé avec une numérotation ligne/colonne"
+    (at 24.13 143.51 0)
+    (effects (font (size 1.27 1.27) italic) (justify left bottom))
+    (uuid f74dda06-a6ef-4780-98c5-35d349e4bb63)
+  )
+
   (label "LED_CENTRALE" (at 46.99 118.11 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 6eeb07d5-022e-4bc1-a609-c5b92025364d)
