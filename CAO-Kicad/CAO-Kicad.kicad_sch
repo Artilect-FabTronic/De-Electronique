@@ -84,55 +84,55 @@
       (reference "#PWR0103") (unit 1) (value "GND") (footprint "")
     )
     (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/fdbb1058-3fe9-46e2-9fe4-df3ad79d095c"
-      (reference "BT1") (unit 1) (value "Battery_Cell_3V") (footprint "")
+      (reference "BT1") (unit 1) (value "Battery_Cell_3V") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
     )
     (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/72356204-2236-4316-9251-37eeb9ae35a9"
-      (reference "C1") (unit 1) (value "100n") (footprint "")
+      (reference "C1") (unit 1) (value "100n") (footprint "Capacitor_THT:C_Rect_L7.2mm_W3.0mm_P5.00mm_FKS2_FKP2_MKS2_MKP2")
     )
     (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/2c513e4b-3ebb-4785-9087-8281c413a06a"
-      (reference "C2") (unit 1) (value "10u") (footprint "")
+      (reference "C2") (unit 1) (value "10u") (footprint "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm")
     )
     (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/684a7b40-a13c-4906-99b9-c3fe125d72da"
-      (reference "D_L1C1") (unit 1) (value "LED") (footprint "")
+      (reference "D_L1C1") (unit 1) (value "LED") (footprint "LED_THT:LED_D5.0mm_Clear")
     )
     (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/e679f2a3-2ca8-4377-b117-38e3707381b5"
-      (reference "D_L1C3") (unit 1) (value "LED") (footprint "")
+      (reference "D_L1C3") (unit 1) (value "LED") (footprint "LED_THT:LED_D5.0mm_Clear")
     )
     (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/cde08a48-2ae6-47f8-a172-acd14e0e6b96"
-      (reference "D_L2C1") (unit 1) (value "LED") (footprint "")
+      (reference "D_L2C1") (unit 1) (value "LED") (footprint "LED_THT:LED_D5.0mm_Clear")
     )
     (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/aa648855-48df-458f-a332-11adcb88c1d8"
-      (reference "D_L2C2") (unit 1) (value "LED") (footprint "")
+      (reference "D_L2C2") (unit 1) (value "LED") (footprint "LED_THT:LED_D5.0mm_Clear")
     )
     (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/0cf442b4-ff94-41e8-8dfb-9ddd7d533f04"
-      (reference "D_L2C3") (unit 1) (value "LED") (footprint "")
+      (reference "D_L2C3") (unit 1) (value "LED") (footprint "LED_THT:LED_D5.0mm_Clear")
     )
     (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/8331dc89-ffbd-46b1-8d8c-3796658808cb"
-      (reference "D_L3C1") (unit 1) (value "LED") (footprint "")
+      (reference "D_L3C1") (unit 1) (value "LED") (footprint "LED_THT:LED_D5.0mm_Clear")
     )
     (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/1e5c6aed-182c-40e6-aaa4-5f6cd5634d52"
-      (reference "D_L3C3") (unit 1) (value "LED") (footprint "")
+      (reference "D_L3C3") (unit 1) (value "LED") (footprint "LED_THT:LED_D5.0mm_Clear")
     )
     (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/86ee8edf-b2e8-48a8-8002-16f4ddfd214a"
-      (reference "J1") (unit 1) (value "ICSP") (footprint "")
+      (reference "J1") (unit 1) (value "ICSP") (footprint "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical")
     )
     (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/b2a94f24-cc43-48f4-9273-521330ea359a"
-      (reference "R1") (unit 1) (value "1k") (footprint "")
+      (reference "R1") (unit 1) (value "1k") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal")
     )
     (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/2cada906-226f-4a5c-84d7-3fca3978edb9"
-      (reference "R2") (unit 1) (value "560") (footprint "")
+      (reference "R2") (unit 1) (value "560") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal")
     )
     (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/420097f8-1b79-46a9-803d-023a4ed5bfef"
-      (reference "R3") (unit 1) (value "560") (footprint "")
+      (reference "R3") (unit 1) (value "560") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal")
     )
     (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/3cf1b8c2-249b-4eca-bced-fd60bf67a987"
-      (reference "R4") (unit 1) (value "560") (footprint "")
+      (reference "R4") (unit 1) (value "560") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal")
     )
     (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/a7dda965-a60d-4a8a-9a21-c8afc088683d"
-      (reference "SW1") (unit 1) (value "COMMUTATEUR A BILLE") (footprint "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm")
+      (reference "SW1") (unit 1) (value "COMMUTATEUR A BILLE") (footprint "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm")
     )
     (path "/c75d577d-1368-4ac4-92ba-6ea9da14150f/2d88dde0-36ea-447a-a2a6-356aced35dcb"
-      (reference "U1") (unit 1) (value "ATtiny85V-10P") (footprint "Package_DIP:DIP-8_W7.62mm")
+      (reference "U1") (unit 1) (value "ATtiny85V-10P") (footprint "Package_DIP:DIP-8_W7.62mm_LongPads")
     )
   )
 )

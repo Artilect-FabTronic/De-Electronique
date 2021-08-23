@@ -2,7 +2,7 @@
 
 On se propose de réaliser le dé électronique qui, lorsque l'on le secoue, tire un numéro au hasard.
 
-![De réalisé par Heliox](Images\vue_ensemble_fonctionnel.png)
+![De réalisé par Heliox](Images/vue_ensemble_fonctionnel.png)
 
 L'objectif est d'avoir un système minimaliste afin de pouvoir le faire fonctionner à partir d'une pile bouton de 3V.
 
@@ -10,16 +10,15 @@ Nous utiliserons donc un microcontrôleur ATtiny85 du fabricant Microchip, compa
 
 Voici deux sources du projet, parmi d'autres que vous retrouverez sur Internet.
 
-[1]: <http://carrefour-numerique.cite-sciences.fr/wiki/doku.php?id=projets:de_electronique>
+1. <http://carrefour-numerique.cite-sciences.fr/wiki/doku.php?id=projets:de_electronique>
 
-[2]: Le tutoriel d'Heliox est articulé en 4 épisodes :
+2. Le tutoriel d'Heliox est articulé en 4 épisodes :
+    1. 📺 [Fabrication d'un circuit imprimé avec transfert de toner](https://youtu.be/8joLK039fjk)
+    2. 📺 [Explication rapide du circuit imprimé et comment placer les composants dessus](https://youtu.be/6BOH1eVT2Hk)
+    3. 📺 [Programmation du microcontrôleur ATtiny85 pour faire fonctionner le dé](https://youtu.be/S-oBujsoe-Q), [Code source HelioxLab](https://github.com/HelioxLab/electronicdice)
+    4. 📺 [Création et modélisation de l'objet 3D final](https://youtu.be/o8AYCznNaCQ)
 
-📺 1 - [Fabrication d'un circuit imprimé avec transfert de toner](https://youtu.be/8joLK039fjk)
-📺 2 - [Explication rapide du circuit imprimé et comment placer les composants dessus](https://youtu.be/6BOH1eVT2Hk)
-📺 3 - [Programmation du microcontrôleur ATtiny85 pour faire fonctionner le dé](https://youtu.be/S-oBujsoe-Q), [Code source HelioxLab](https://github.com/HelioxLab/electronicdice)
-📺 4 - [Création et modélisation de l'objet 3D final](https://youtu.be/o8AYCznNaCQ)
-
-![montage du de conçu par Heliox](Images\montage_de.png)
+![montage du de conçu par Heliox](Images/montage_de.png)
 
 ## Evolution possible du projet
 
@@ -30,8 +29,9 @@ Voici deux sources du projet, parmi d'autres que vous retrouverez sur Internet.
 
 ## Les outils logiciels utilisés
 
-- KiCad en version 5.99 "[Nightly Development Builds](https://www.kicad.org/download/windows/)", est téléchargeable depuis la page du serveur, aller tout en bas pour trouver la dernière date de compilation :
+- CAO éléctronique KiCad en version 5.99 "[Nightly Development Builds](https://www.kicad.org/download/windows/)", est téléchargeable depuis la page du serveur, aller tout en bas pour trouver la dernière date de compilation :
 <https://kicad-downloads.s3.cern.ch/index.html?prefix=windows/nightly/>
+- CAO mécanique [FreeCAD](https://www.freecadweb.org/?lang=fr)
 - [Arduino IDE 1.8.15](https://www.arduino.cc/en/software)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -49,13 +49,15 @@ Voici deux sources du projet, parmi d'autres que vous retrouverez sur Internet.
 - [Kit résistance à fil métallique, 600 pcs/lot, 30 valeurs* 20 pcs de 10 ohms ~ 1 M ohm, 1 %, 1/4 W](https://fr.aliexpress.com/item/1005001774876666.html)
 - [Support de piles, CR2032, pour piles bouton 3V](https://fr.aliexpress.com/item/32845557622.html),  modèle 3D : [20mm THT Coin Cell Holder](https://grabcad.com/library/20mm-tht-coin-cell-holder-1)
 
+---
+
 ## TODO: Schématique
 
 "arduino attiny85 pinout" depuis la page : https://learn.sparkfun.com/tutorials/tiny-avr-programmer-hookup-guide/attiny85-use-hints
 
 Brochage (Pinout en Anglais) de l'ATtiny85 :
 
-![ATtiny85 Pinout](Images\ATtiny85_Pinout_x1024.jpg)
+![ATtiny85 Pinout](Images/ATtiny85_Pinout_x1024.jpg)
 
 Afin de pouvoir programmer l'ATtiny85, nous utiliserons un connecteur dit **_ISP_** ou **_ICSP_** pour In-circuit Serial Programmer, de 2x3 broches, voir [Arduino as ISP and Arduino Bootloaders](https://www.arduino.cc/en/pmwiki.php?n=Tutorial/ArduinoISP).
 
@@ -74,8 +76,6 @@ Puis ajouter le support pour les [ATtiny](https://github.com/damellis/attiny) de
 Une fois cela effectué, vous pourrez choisir le type de carte ATtiny25/45/85, préciser bien le modèle du "processeur" ATtiny85 et le choix de l'horloge interne à 8 MHz.
 
 TODO: passer à 1 MHz et voir la différence de consommation...
-
----
 
 ### de_elec.kicad_sch
 
@@ -103,7 +103,7 @@ En regroupant les LED entre parenthèse, nous voyant que nous devons piloter sé
 
 Soit un total de 4 broches en sortie pour la commande des LED du projet :
 
-![Pilotage des LED](Images\de_sequence_chiffre_1_a_6.gif)
+![Pilotage des LED](Images/de_sequence_chiffre_1_a_6.gif)
 
 ---
 
@@ -117,12 +117,13 @@ Marque: Nexperia
 74HC595D SO16 plastic small outline package; 16 leads; body width 3.9 mm
 Package Version: SOT109-1
 
-https://fr.rs-online.com/web/c/afficheurs-et-optoelectronique/led-et-accessoires/led/?&applied-dimensions=4294080478,4294458855
+<https://fr.rs-online.com/web/c/afficheurs-et-optoelectronique/led-et-accessoires/led/?&applied-dimensions=4294080478,4294458855>
 
-LED Vert, Rouge, CMS, PLCC 4, 2 LEDs, 2,5 V
-https://fr.rs-online.com/web/p/led/8721727
+[LED Vert, Rouge, CMS, PLCC 4, 2 LEDs, 2,5 V](https://fr.rs-online.com/web/p/led/8721727)
 
-Possibilité d'utilisé un montage du type [Charlieplexing](https://en.wikipedia.org/wiki/Charlieplexing) pour piloter plusieurs LED, exemple : https://www.instructables.com/Dice-ATTINY85-Charlieplexing/
+Possibilité d'utilisé un montage du type [Charlieplexing](https://en.wikipedia.org/wiki/Charlieplexing) pour piloter plusieurs LED, exemple : <https://www.instructables.com/Dice-ATTINY85-Charlieplexing/>
+
+---
 
 ## Internet ⚀, ⚁, ⚂, ⚃, ⚄, ⚅
 
@@ -138,11 +139,20 @@ Possibilité d'utilisé un montage du type [Charlieplexing](https://en.wikipedia
 
 - [How 74HC595 Shift Register Works & Interface it with Arduino](https://lastminuteengineers.com/74hc595-shift-register-arduino-tutorial/)
 - [Comment utiliser un registre à décalage 74HC595 avec un AVR ATtiny13](https://www.tubefr.com/comment-utiliser-un-registre-a-decalage-74hc595-avec-un-avr-attiny13.html)
-- https://www.mikroe.com/search?search_query=74HC595
-- 
+- [Led ring R click de MikroElektronika](https://www.mikroe.com/search?search_query=74HC595)
 
 ## Autres idées de carte
 
 - [Create Own ATTiny 85 Arduino Based Wearables](https://thecustomizewindows.com/2017/06/create-attiny85-arduino-based-wearables/)
 - [ATtiny85 PIR sensor](https://www.borngeek.net/Projects/attiny85-pir-sensor)
 - [Série d’articles sur les ATtiny](https://www.locoduino.org/spip.php?article285)
+
+---
+
+## License
+
+[![MIT License](http://rasterweb.net/raster/wp-content/uploads/2011/05/opensource2.png?raw=true "Projet Open Hardware et Open Source by Artilect")](https://opensource.org/licenses/MIT)
+
+[Open Hardware](https://fr.wikipedia.org/wiki/Mat%C3%A9riel_libre)
+
+[MIT License](https://opensource.org/licenses/MIT)
