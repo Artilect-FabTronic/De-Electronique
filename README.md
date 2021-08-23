@@ -2,32 +2,112 @@
 
 On se propose de réaliser le dé électronique qui, lorsque l'on le secoue, tire un numéro au hasard.
 
-Nous utiliserons un microcontrôleur ATtiny85 de Microchip compatible avec les carte Arduino.
+![De réalisé par Heliox](Images\vue_ensemble_fonctionnel.png)
 
-Voici une source du projet (parmi d'autres sur Internet): http://carrefour-numerique.cite-sciences.fr/wiki/doku.php?id=projets:de_electronique
+L'objectif est d'avoir un système minimaliste afin de pouvoir le faire fonctionner à partir d'une pile bouton de 3V.
 
-[Arduino as ISP and Arduino Bootloaders](https://www.arduino.cc/en/pmwiki.php?n=Tutorial/ArduinoISP)
+Nous utiliserons donc un microcontrôleur ATtiny85 du fabricant Microchip, compatible avec les cartes Arduino ([ATtiny microcontroller comparison chart](https://en.wikipedia.org/wiki/ATtiny_microcontroller_comparison_chart)).
 
-Implantation du connecteur de programmation ICSP à partir du schéma de la carte Arduino Nano :
+Voici deux sources du projet, parmi d'autres que vous retrouverez sur Internet.
 
-https://store.arduino.cc/arduino-nano
+[1]: <http://carrefour-numerique.cite-sciences.fr/wiki/doku.php?id=projets:de_electronique>
 
-Depuis : "L'impression 3D pour les projets électroniques - EP04 Projet Dé Electronique" (18 févr. 2018)
-https://www.youtube.com/watch?v=o8AYCznNaCQ&ab_channel=Heliox
-Et "Programmer un attiny85 - EP03 Projet Dé Electronique"https://www.youtube.com/watch?v=S-oBujsoe-Q&ab_channel=Heliox
-https://www.microchip.com/wwwproducts/en/ATtiny85
+[2]: Le tutoriel d'Heliox est articulé en 4 épisodes :
+
+📺 1 - [Fabrication d'un circuit imprimé avec transfert de toner](https://youtu.be/8joLK039fjk)
+📺 2 - [Explication rapide du circuit imprimé et comment placer les composants dessus](https://youtu.be/6BOH1eVT2Hk)
+📺 3 - [Programmation du microcontrôleur ATtiny85 pour faire fonctionner le dé](https://youtu.be/S-oBujsoe-Q), [Code source HelioxLab](https://github.com/HelioxLab/electronicdice)
+📺 4 - [Création et modélisation de l'objet 3D final](https://youtu.be/o8AYCznNaCQ)
+
+![montage du de conçu par Heliox](Images\montage_de.png)
+
+## Evolution possible du projet
+
+- Projet initial à partir du tutoriel d'Heliox et des composants traversants
+- Même projet mais avec une carte électronique supportant des composants CMS
+- Autre version avec l'utilisation de [registre à décalage](https://fr.wikipedia.org/wiki/Registre_%C3%A0_d%C3%A9calage) pour le pilotage des LED
+- [Projet plus ambitieux avec des LED sur toutes les faces](https://www.youtube.com/watch?v=6NPTslF68Q0&ab_channel=maker.moekoe)
+
+## Les outils logiciels utilisés
+
+- KiCad en version 5.99 "[Nightly Development Builds](https://www.kicad.org/download/windows/)", est téléchargeable depuis la page du serveur, aller tout en bas pour trouver la dernière date de compilation :
+<https://kicad-downloads.s3.cern.ch/index.html?prefix=windows/nightly/>
+- [Arduino IDE 1.8.15](https://www.arduino.cc/en/software)
+- [Visual Studio Code](https://code.visualstudio.com/)
+
+## Le matériel du projet dé électronique (BOM)
+
+- Matériaux PLA pour l'imprimante 3D, à partir des [fichiers STL fournis par HELIOX](https://www.thingiverse.com/thing:2798081)
+- Un fer à souder pour assembler les composants sur le circuit imprimé (PCB), ainsi qu'un petit outillage, comme un multimètre, des pinces, etc...
+- [Interrupteur à bascule 3 broches 1P2T, poignée haute 4 mm, SS12F15](https://fr.aliexpress.com/item/32765155281.html)
+- [Piles bouton au Lithium 3V, CR2032](https://fr.aliexpress.com/item/1005001314447472.html)
+- [ATtiny85](https://www.microchip.com/wwwproducts/en/ATtiny85), [Microcontrôleur MCU 8BIT 20MHZ, 8 broches DIP-8 ATTINY85](https://fr.aliexpress.com/item/32952262601.html), [ATTINY85V-10PU](https://octopart.com/attiny85v-10pu-microchip-77762335), [Farnell 1455165](https://fr.farnell.com/microchip/attiny85v-10pu/mcu-8bit-attiny-10mhz-dip-8/dp/1455165) (l'option V permet de descendre la tension d'alimentation jusqu'à 1V8)
+- Interrupteur à bille (mouvement et inclinaison) : [Capteur de vibrations en métal, Boule d'inclinaison secouant commutateur, SW-520D SW520D](https://www.aliexpress.com/item/100PCS-SW-520D-SW520D-Vibration-Sensor-Metal-Ball-Tilt-Shaking-Switch/4000680935322.html)
+- [Kit de LED, taille 5 mm, 2V ou 3 V, ensemble d'ampoules couleurs chaudes, blanc, rouge, bleu, vert, orange, jaune](https://fr.aliexpress.com/item/1936218827.html)
+- [Assortiment de condensateurs électrolytiques, 125 Pieces 1uF 2200uF 25 Valeurs](https://www.amazon.fr/gp/product/B00JZETYIG/ref=ppx_yo_dt_b_asin_title_o01_s00)
+- [Boîtier/Socket support DIP 8 broches, 0.3 inch / 7.62mm](https://www.amazon.fr/gp/product/B016S6ZQQM/ref=ppx_yo_dt_b_asin_title_o00_s00)
+- [Kit résistance à fil métallique, 600 pcs/lot, 30 valeurs* 20 pcs de 10 ohms ~ 1 M ohm, 1 %, 1/4 W](https://fr.aliexpress.com/item/1005001774876666.html)
+- [Support de piles, CR2032, pour piles bouton 3V](https://fr.aliexpress.com/item/32845557622.html),  modèle 3D : [20mm THT Coin Cell Holder](https://grabcad.com/library/20mm-tht-coin-cell-holder-1)
 
 ## TODO: Schématique
 
+"arduino attiny85 pinout" depuis la page : https://learn.sparkfun.com/tutorials/tiny-avr-programmer-hookup-guide/attiny85-use-hints
+
+Brochage (Pinout en Anglais) de l'ATtiny85 :
+
+![ATtiny85 Pinout](Images\ATtiny85_Pinout_x1024.jpg)
+
+Afin de pouvoir programmer l'ATtiny85, nous utiliserons un connecteur dit **_ISP_** ou **_ICSP_** pour In-circuit Serial Programmer, de 2x3 broches, voir [Arduino as ISP and Arduino Bootloaders](https://www.arduino.cc/en/pmwiki.php?n=Tutorial/ArduinoISP).
+
+Nous pouvons nous inspirer du schéma d'implantation du connecteur de programmation ICSP à partir du schéma de la [carte Arduino Nano](https://store.arduino.cc/arduino-nano).
+
+Et pour la programmation, suivre les instruction ici : [Programming ATtiny85 with Arduino Uno](https://create.arduino.cc/projecthub/arjun/programming-attiny85-with-arduino-uno-afb829)
+
+Si vous avez tou suivit, vous aurez vu que par défaut, l'environnement Arduino IDE ne prend pas en charge les microcontrôleurs ATtiny85. Nous devons donc ajouter les cartes ATtiny à l'IDE Arduino.
+
+Pour cela, ouvrez le menu "Fichier -> Préférences" et dans les URL du gestionnaire de cartes supplémentaires, ajoutez cette URL :
+
+`https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json`
+
+Puis ajouter le support pour les [ATtiny](https://github.com/damellis/attiny) depuis le gestionnaire de carte.
+
+Une fois cela effectué, vous pourrez choisir le type de carte ATtiny25/45/85, préciser bien le modèle du "processeur" ATtiny85 et le choix de l'horloge interne à 8 MHz.
+
+TODO: passer à 1 MHz et voir la différence de consommation...
+
+---
+
 ### de_elec.kicad_sch
 
-Mettre les LED sous la forme du Dé avec une numérotation ligne/colonne
+Mettre les LED sous la forme du dé avec une numérotation Ligne/Colonne (L/C) :
 
-| L1C1 | L1C2 | L1C3 |
-| L2C1 | L2C2 | L2C3 |
-| L3C1 | L3C2 | L3C3 |
+|   L/C  |  C1  |  C2  |  C3  |
+|:------:|:----:|:----:|:----:|
+| **L1** | L1C1 | L1C2 | L1C3 |
+| **L2** | L2C1 | L2C2 | L2C3 |
+| **L3** | L3C1 | L3C2 | L3C3 |
 
-## TODO: Recherche composants pour d'autres versions du dé
+- Chiffre 1 : (L2C2)
+- Chiffre 2 : (L3C1 + L1C3)
+- Chiffre 3 : (L3C1 + L1C3) + (L2C2)
+- Chiffre 4 : (L3C1 + L1C3) + (L1C1 + L3C3)
+- Chiffre 5 : (L3C1 + L1C3) + (L1C1 + L3C3) + (L2C2)
+- Chiffre 6 : (L3C1 + L1C3) + (L1C1 + L3C3) + (L2C1 + L2C3)
+
+En regroupant les LED entre parenthèse, nous voyant que nous devons piloter séparément les groupes suivant, si l'on veux pouvoir afficher tous les chiffres :
+
+- 1 broche en sortie pour commander la LED L2C2, nous la nommerons CMD_L2C2
+- 1 broche en sortie pour commander les LED L3C1 et L1C3, nous la nommerons CMD_L3C1L1C3
+- 1 broche en sortie pour commander les LED L1C1 et L3C3, nous la nommerons CMD_L1C1L3C3
+- 1 broche en sortie pour commander les LED L2C1 et L2C3, nous la nommerons CMD_L2C1C3
+
+Soit un total de 4 broches en sortie pour la commande des LED du projet :
+
+![Pilotage des LED](Images\de_sequence_chiffre_1_a_6.gif)
+
+---
+
+## TODO: Recherche composants pour d'autres versions du dé électronique
 
 Série vers série Parallèle HC , Unidirectionnel 8 bit SOIC 16 broches
 https://fr.rs-online.com/web/p/compteurs-et-registres-a-decalage/1713136 ***
@@ -42,6 +122,8 @@ https://fr.rs-online.com/web/c/afficheurs-et-optoelectronique/led-et-accessoires
 LED Vert, Rouge, CMS, PLCC 4, 2 LEDs, 2,5 V
 https://fr.rs-online.com/web/p/led/8721727
 
+Possibilité d'utilisé un montage du type [Charlieplexing](https://en.wikipedia.org/wiki/Charlieplexing) pour piloter plusieurs LED, exemple : https://www.instructables.com/Dice-ATTINY85-Charlieplexing/
+
 ## Internet ⚀, ⚁, ⚂, ⚃, ⚄, ⚅
 
 - [Dé — Wikipédia](https://fr.wikipedia.org/wiki/D%C3%A9)
@@ -51,3 +133,16 @@ https://fr.rs-online.com/web/p/led/8721727
 - [dé électronique qui se déclenche par passage de la main au dessus d'une photorésistance](https://sciences-du-numerique.fr/projet-arduino-pour-la-specialite-isn/de-electronique/41)
 - [Fabriquer soit même un Dé électronique sans Arduino](https://www.youtube.com/watch?v=spbdDq6kvxw&ab_channel=ElectroMic)
 - [Le registre à décalage](https://www.fabriqueurs.com/le-registre-a-decalage-sipo/)
+
+### Registre à décalage "74HC595"
+
+- [How 74HC595 Shift Register Works & Interface it with Arduino](https://lastminuteengineers.com/74hc595-shift-register-arduino-tutorial/)
+- [Comment utiliser un registre à décalage 74HC595 avec un AVR ATtiny13](https://www.tubefr.com/comment-utiliser-un-registre-a-decalage-74hc595-avec-un-avr-attiny13.html)
+- https://www.mikroe.com/search?search_query=74HC595
+- 
+
+## Autres idées de carte
+
+- [Create Own ATTiny 85 Arduino Based Wearables](https://thecustomizewindows.com/2017/06/create-attiny85-arduino-based-wearables/)
+- [ATtiny85 PIR sensor](https://www.borngeek.net/Projects/attiny85-pir-sensor)
+- [Série d’articles sur les ATtiny](https://www.locoduino.org/spip.php?article285)
