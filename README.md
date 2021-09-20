@@ -1,6 +1,7 @@
 # Projet de dé électronique
 
-L'ambition de ce projet, est de vous permettre de vous initier à la conception d'une carte électronique que vous concevrez vous même. Une fois que vous s'aurez dessiner et réaliser un circuit imprimer (PCB), vous pourrez réaliser vos propres montages électroniques.
+L'ambition de ce projet, est de vous permettre de vous initier à la conception d'une carte électronique à travers un exemple simple, que vous concevrez vous même.
+Une fois que vous s'aurez dessiner et réaliser un premier circuit imprimer (PCB), vous pourrez réaliser vos propres montages électroniques.
 
 ## Description
 
