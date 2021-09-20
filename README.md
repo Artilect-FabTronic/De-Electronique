@@ -1,8 +1,12 @@
 # Projet de dé électronique
 
-On se propose de réaliser le dé électronique qui, lorsque l'on le secoue, tire un numéro au hasard.
+L'ambition de ce projet, est de vous permettre de vous initier à la conception d'une carte électronique que vous concevrez vous même. Une fois que vous s'aurez dessiner et réaliser un circuit imprimer (PCB), vous pourrez réaliser vos propres montages électroniques.
 
-![De réalisé par Heliox](Images/vue_ensemble_fonctionnel.png)
+## Description
+
+On se propose de réaliser le dé électronique d'Heliox, qui lorsqu'on le secoue, tire un numéro de 1 à 6 de manière aléatoire.
+
+![Dé réalisé par Heliox](Images/vue_ensemble_fonctionnel.png)
 
 L'objectif est d'avoir un système minimaliste afin de pouvoir le faire fonctionner à partir d'une pile bouton de 3V.
 
@@ -18,6 +22,7 @@ Voici deux sources du projet, parmi d'autres que vous retrouverez sur Internet.
     3. 📺 [Programmation du microcontrôleur ATtiny85 pour faire fonctionner le dé](https://youtu.be/S-oBujsoe-Q), [Code source HelioxLab](https://github.com/HelioxLab/electronicdice)
     4. 📺 [Création et modélisation de l'objet 3D final](https://youtu.be/o8AYCznNaCQ)
 
+<!-- Routage du PCB réalisé par Heliox avec le logiciel  <https://fritzing.org/download/> -->
 ![montage du de conçu par Heliox](Images/montage_de.png)
 
 ## Evolution possible du projet
@@ -77,7 +82,18 @@ Une fois cela effectué, vous pourrez choisir le type de carte ATtiny25/45/85, p
 
 TODO: passer à 1 MHz et voir la différence de consommation...
 
+---
+
 ### de_elec.kicad_sch
+
+Nous allons étudier ensemble le montage électronique ;-)
+
+Le microcontrôleur ATtiny85 dispose de 8 broches, dont 2 sont réservées pour son alimentation électrique.
+
+Nous devons donc sélectionner les broches numériques d'entrées/sorties (E/S) permettant le bon fonctionnement de notre projet.
+
+Tout d'abord, nous aurons besoin d'une entrée pour le capteur de mouvement à bille.
+Il faut alors ce pencher sur les fonctions des broches du microcontrôleur afin de pouvoir décider quelle broche nous sera utile afin de pouvoir détecter cet évènement.
 
 Mettre les LED sous la forme du dé avec une numérotation Ligne/Colonne (L/C) :
 
@@ -101,27 +117,9 @@ En regroupant les LED entre parenthèse, nous voyant que nous devons piloter sé
 - 1 broche en sortie pour commander les LED L1C1 et L3C3, nous la nommerons CMD_L1C1L3C3
 - 1 broche en sortie pour commander les LED L2C1 et L2C3, nous la nommerons CMD_L2C1C3
 
-Soit un total de 4 broches en sortie pour la commande des LED du projet :
+Soit un total de 4 broches en sorties pour la commande des LED du projet :
 
 ![Pilotage des LED](Images/de_sequence_chiffre_1_a_6.gif)
-
----
-
-## TODO: Recherche composants pour d'autres versions du dé électronique
-
-Série vers série Parallèle HC , Unidirectionnel 8 bit SOIC 16 broches
-https://fr.rs-online.com/web/p/compteurs-et-registres-a-decalage/1713136 ***
-Code commande RS: [436-7638](https://fr.rs-online.com/web/p/compteurs-et-registres-a-decalage/4367638)
-Référence fabricant: 74HC595D,112
-Marque: Nexperia
-74HC595D SO16 plastic small outline package; 16 leads; body width 3.9 mm
-Package Version: SOT109-1
-
-<https://fr.rs-online.com/web/c/afficheurs-et-optoelectronique/led-et-accessoires/led/?&applied-dimensions=4294080478,4294458855>
-
-[LED Vert, Rouge, CMS, PLCC 4, 2 LEDs, 2,5 V](https://fr.rs-online.com/web/p/led/8721727)
-
-Possibilité d'utilisé un montage du type [Charlieplexing](https://en.wikipedia.org/wiki/Charlieplexing) pour piloter plusieurs LED, exemple : <https://www.instructables.com/Dice-ATTINY85-Charlieplexing/>
 
 ---
 
@@ -133,19 +131,6 @@ Possibilité d'utilisé un montage du type [Charlieplexing](https://en.wikipedia
 - [Heliox - Fabriquer un circuit imprimé - EP01 Projet Dé Electronique](https://www.youtube.com/watch?v=8joLK039fjk&ab_channel=Heliox), voir "[EP02 Projet Dé Electronique](https://www.youtube.com/watch?v=6BOH1eVT2Hk&ab_channel=Heliox)"
 - [dé électronique qui se déclenche par passage de la main au dessus d'une photorésistance](https://sciences-du-numerique.fr/projet-arduino-pour-la-specialite-isn/de-electronique/41)
 - [Fabriquer soit même un Dé électronique sans Arduino](https://www.youtube.com/watch?v=spbdDq6kvxw&ab_channel=ElectroMic)
-- [Le registre à décalage](https://www.fabriqueurs.com/le-registre-a-decalage-sipo/)
-
-### Registre à décalage "74HC595"
-
-- [How 74HC595 Shift Register Works & Interface it with Arduino](https://lastminuteengineers.com/74hc595-shift-register-arduino-tutorial/)
-- [Comment utiliser un registre à décalage 74HC595 avec un AVR ATtiny13](https://www.tubefr.com/comment-utiliser-un-registre-a-decalage-74hc595-avec-un-avr-attiny13.html)
-- [Led ring R click de MikroElektronika](https://www.mikroe.com/search?search_query=74HC595)
-
-## Autres idées de carte
-
-- [Create Own ATTiny 85 Arduino Based Wearables](https://thecustomizewindows.com/2017/06/create-attiny85-arduino-based-wearables/)
-- [ATtiny85 PIR sensor](https://www.borngeek.net/Projects/attiny85-pir-sensor)
-- [Série d’articles sur les ATtiny](https://www.locoduino.org/spip.php?article285)
 
 ---
 

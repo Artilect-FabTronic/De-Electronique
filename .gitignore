@@ -3,3 +3,4 @@
 
 # Ignorer les fichiers suivants
 _autosave*
+*.FCStd1
