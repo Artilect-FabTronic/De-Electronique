@@ -65,13 +65,15 @@ Brochage (Pinout en Anglais) de l'ATtiny85 :
 
 ![ATtiny85 Pinout](Images/ATtiny85_Pinout_x1024.jpg)
 
+[Programmation de l’ATtiny85](http://makerspace56.org/transformer-une-arduino-uno-en-programmateur-isp-dattiny-par-exemple/)
+
 Afin de pouvoir programmer l'ATtiny85, nous utiliserons un connecteur dit **_ISP_** ou **_ICSP_** pour In-circuit Serial Programmer, de 2x3 broches, voir [Arduino as ISP and Arduino Bootloaders](https://www.arduino.cc/en/pmwiki.php?n=Tutorial/ArduinoISP).
 
 Nous pouvons nous inspirer du schéma d'implantation du connecteur de programmation ICSP à partir du schéma de la [carte Arduino Nano](https://store.arduino.cc/arduino-nano).
 
 Et pour la programmation, suivre les instruction ici : [Programming ATtiny85 with Arduino Uno](https://create.arduino.cc/projecthub/arjun/programming-attiny85-with-arduino-uno-afb829)
 
-Si vous avez tou suivit, vous aurez vu que par défaut, l'environnement Arduino IDE ne prend pas en charge les microcontrôleurs ATtiny85. Nous devons donc ajouter les cartes ATtiny à l'IDE Arduino.
+Si vous avez tous suivi, vous aurez vu que par défaut, l'environnement Arduino IDE ne prend pas en charge les microcontrôleurs ATtiny85. Nous devons donc ajouter les cartes ATtiny à l'IDE Arduino.
 
 Pour cela, ouvrez le menu "Fichier -> Préférences" et dans les URL du gestionnaire de cartes supplémentaires, ajoutez cette URL :
 
@@ -82,6 +84,10 @@ Puis ajouter le support pour les [ATtiny](https://github.com/damellis/attiny) de
 Une fois cela effectué, vous pourrez choisir le type de carte ATtiny25/45/85, préciser bien le modèle du "processeur" ATtiny85 et le choix de l'horloge interne à 8 MHz.
 
 TODO: passer à 1 MHz et voir la différence de consommation...
+
+### Programmation de l'ATtiny85 depuis une carte Arduino Uno
+
+Une fois le programme compilé sous l'IDE Arduino (version 1.8.16 sous Windows 10, avec les paramètres de carte : "ATtiny25/45/85, ATtiny85, Internal 8 MHz"), il est important pour la programmation de votre ATtiny85 cible de bien configurer le programmer externe, afin de pouvoir effectuer la programmation.
 
 ---
 
@@ -129,9 +135,8 @@ Soit un total de 4 broches en sorties pour la commande des LED du projet :
 - [Dé — Wikipédia](https://fr.wikipedia.org/wiki/D%C3%A9)
 - [Lancez un dé virtuel!](https://de.virtuworld.net/)
 - [Patrons de dés à jouer](https://www.fiche-maternelle.com/fabriquer-son-des-a-jouer.html)
-- [Heliox - Fabriquer un circuit imprimé - EP01 Projet Dé Electronique](https://www.youtube.com/watch?v=8joLK039fjk&ab_channel=Heliox), voir "[EP02 Projet Dé Electronique](https://www.youtube.com/watch?v=6BOH1eVT2Hk&ab_channel=Heliox)"
-- [dé électronique qui se déclenche par passage de la main au dessus d'une photorésistance](https://sciences-du-numerique.fr/projet-arduino-pour-la-specialite-isn/de-electronique/41)
 - [Fabriquer soit même un Dé électronique sans Arduino](https://www.youtube.com/watch?v=spbdDq6kvxw&ab_channel=ElectroMic)
+- [dé électronique qui se déclenche par passage de la main au dessus d'une photorésistance](https://sciences-du-numerique.fr/projet-arduino-pour-la-specialite-isn/de-electronique/41)
 
 ---
 

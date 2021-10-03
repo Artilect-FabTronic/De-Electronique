@@ -1,6 +1,6 @@
 /**
    Projet du dé électronique - FabTronic 2021
-   Source :
+   Source : 
    
    ATtiny85 (8MHz)
 
@@ -27,7 +27,7 @@
 //
 //                  +--\/--+
 // Ain0 (D 5) PB5  1|      |8  Vcc
-// Ain3 (D 3) PB3  2|      |7  PB2 (D 2) Ain1
+// Ain3 (D 3) PB3  2|      |7  PB2 (D 2) Ain1 / INT0
 // Ain2 (D 4) PB4  3|      |6  PB1 (D 1) pwm1
 //            GND  4|      |5  PB0 (D 0) pwm0
 //                  +------+
@@ -38,10 +38,22 @@
 #include <util/delay.h>
 #include <avr/sleep.h>
 
-#define LEDUNSIX       1     // Leds 1 et 6 sur PB1
-#define LEDTROISQUATRE 0     // Leds 3 et 4 sur PB5
-#define LEDDEUXCINQ    4     // Leds 2 et 5 sur PB4
+//#warning "F CPU = "
+//#warning F_CPU
+
+/*
+Correspondance des E/S avec <http://carrefour-numerique.cite-sciences.fr/wiki/doku.php?id=projets:de_electronique>
+PB0 = CMD_L1C1L3C3 // Leds 1 et 6
+PB1 = CMD_L3C1L1C3 // Leds 2 et 5
+PB2 = SW1, COMMUTATEUR A BILLE
+PB3 = CMD_L2C2 // Led 7
+PB4 = CMD_L2C1C3 // Leds 3 et 4
+*/
+#define LEDUNSIX       0     // Leds 1 et 6 sur PB1
+#define LEDTROISQUATRE 4     // Leds 3 et 4 sur PB5
+#define LEDDEUXCINQ    1     // Leds 2 et 5 sur PB4
 #define LEDSEPT        3     // Leds 7 sur PB3
+
 #define UNESECONDE     100   // 1 seconde égal à 1000 ms --> TODO: Déterminer la Fq de travail et la bonne valeur
 
 volatile uint8_t roll = 0, initSeed = 0, seed = 0;
@@ -78,16 +90,16 @@ void action() {
   } while (tirage == newTirage);
 
   afficheTirage(newTirage);
-  _delay_ms(UNESECONDE * 5);           // Tirage final, on fait une pause de 5 secondes.*/
+  _delay_ms(UNESECONDE * 5);  // Tirage final, on fait une pause de 5 secondes
   onEteind();
   roll = 0;
 }
 
 void init_ISR() { // INITIALISATION des routines d'initialisation
-  PORTB |= 1 << PB2; //|1<<PB5;   // configuration du port B2  PULL UP (PB2) (AND USUED PIN PB5 : pas utilisé)
+  PORTB |= 1 << PB2;   // configuration du bit 0 du port B avec résistance de PULL UP (PB2)
   MCUCR |= 1 << ISC01; // Falling EDGE INT0 (PB2)
-  GIMSK |= 1 << INT0; // Activate the INT0
-  sei();             //Active General Interrupt
+  GIMSK |= 1 << INT0;  // Activate the INT0
+  sei();               // Active General Interrupt
 }
 
 void init_GPIO() {
