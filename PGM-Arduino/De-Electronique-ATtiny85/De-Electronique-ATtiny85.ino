@@ -38,6 +38,8 @@
 #include <util/delay.h>
 #include <avr/sleep.h>
 
+#define adc_disable() (ADCSRA &= ~(1<<ADEN)) // disable ADC (before power-off)
+
 //#warning "F CPU = "
 //#warning F_CPU
 
@@ -144,6 +146,7 @@ void afficheTirage(uint8_t tirage) {
 int main() {
   init_GPIO();
   init_ISR();
+  adc_disable();
 
   while (1) {
     if (initSeed == 0) {
