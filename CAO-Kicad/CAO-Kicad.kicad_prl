@@ -73,8 +73,8 @@
   "project": {
     "files": [
       {
-        "name": "CAO-Kicad.kicad_pcb",
-        "open": false,
+        "name": "CAO-Kicad.kicad_sch",
+        "open": true,
         "window": {
           "display": 0,
           "maximized": true,

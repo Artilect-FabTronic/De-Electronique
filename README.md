@@ -57,7 +57,9 @@ Voici deux sources du projet, parmi d'autres que vous retrouverez sur Internet.
 
 ---
 
-## TODO: Schématique
+## Schématique
+
+![schematique-de-elec-v1-0](Images/schematique-de-elec-v1-0.png)
 
 "arduino attiny85 pinout" depuis la page : https://learn.sparkfun.com/tutorials/tiny-avr-programmer-hookup-guide/attiny85-use-hints
 
@@ -85,13 +87,17 @@ Une fois cela effectué, vous pourrez choisir le type de carte ATtiny25/45/85, p
 
 TODO: passer à 1 MHz et voir la différence de consommation...
 
+## Carte électronique
+
+![carte-de-elec-v1-0-vue-dessus](Images/pcb_vue_dessus_img.png)![carte-de-elec-v1-0-vue-dessous](Images/pcb_vue_dessous_img.png)
+
 ### Programmation de l'ATtiny85 depuis une carte Arduino Uno
 
 Une fois le programme compilé sous l'IDE Arduino (version 1.8.16 sous Windows 10, avec les paramètres de carte : "ATtiny25/45/85, ATtiny85, Internal 8 MHz"), il est important pour la programmation de votre ATtiny85 cible de bien configurer le programmer externe, afin de pouvoir effectuer la programmation.
 
 ---
 
-### de_elec.kicad_sch
+### Description du fonctionnement
 
 Nous allons étudier ensemble le montage électronique ;-)
 
@@ -127,6 +133,11 @@ En regroupant les LED entre parenthèse, nous voyant que nous devons piloter sé
 Soit un total de 4 broches en sorties pour la commande des LED du projet :
 
 ![Pilotage des LED](Images/de_sequence_chiffre_1_a_6.gif)
+
+Consommation en veille = 373 uA
+Consommation au repos = 800 uA
+Consommation avec 1 LED = 2.62 mA
+Consommation avec 4 LED = 8.13 mA
 
 ---
 
